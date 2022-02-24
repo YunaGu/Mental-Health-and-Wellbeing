@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<link th:href="@{css/nature.css}" rel="stylesheet"/>
+
+<!--Nature heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Nature</h1>
+</header>
+
+<!--Nature section-->
+
+    <section class="bg-light p-5">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="row">
+                <div class="col text-center mb-3">
+                    <h1 class="display-4">Nature and Wellbeing</h1>
+                    <p class="lead text-secondary">When was the last time you spent time with nature?</p>
+                </div>
+
+            </div>
+            <div class="naturebenefits">
+                <h2>What are the benefits of being in nature?</h2>
+                <h5 class="lead text-secondary"> The term 'nature' can have various meanings ranging from green spaces such as parks,
+                    woodlands, and forests, to beaches, rivers and lakes. Recent studies have proven that a simple act such as watching
+                    a nature documentary can also have positive effects on our mental health, making the benefits of nature available
+                    to all of us. Some blogs listing the benefits of connecting with nature are listed below: </h5>
+                <ul>
+                    <li><a href="https://www.rtor.org/2018/06/21/therapy-in-nature/#:~:text=Reconnecting%20with%20nature%20has%20been%20shown%20to%20be,worries%20and%20reduce%20feelings%20of%20anger%20and%20tension.">Benefits of nature exposure</a></li>
+                    <li><a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/nature-and-mental-health/how-nature-benefits-mental-health/">The relationship between nature and mental health</a></li>
+                    <li><a href="https://www.gov.uk/government/news/connecting-with-nature-offers-a-new-approach-to-mental-health-care">Nature based approach to mental health management</a></li>
+                    <li><a href="https://insideecology.com/2018/09/19/why-does-a-connection-with-the-rest-of-nature-improve-well-being/#:~:text=The%20research%20shows%20that%20well-being%20in%20nature%20is,beauty%20flow%20in%20through%20your%20eyes%20and%20ears.">Why does nature have a positive impact on wellbeing?</a></li>
+                </ul>
+                </ul>
+            </div>
+
+        </div>
+        <div class="connectresources">
+            <h2>Resources for connecting with nature</h2>
+            <h5 class="lead text-secondary"> Below are some suggestions on how to connect with nature with links to resources."</h5><br>
+            <ul>
+                <li>Gardening</li>
+                <img src="/static/images/gardening.jpg" class="garden-img" th:src="@{images/gardening.jpg}"/>
+                <br><a href="https://www.thrive.org.uk/how-we-help/what-we-do/why-gardening-is-good-for-our-health/why-gardening-is-good-for-your-mental-wellbeing#:~:text=There%E2%80%99s%20growing%20evidence%20that%20gardening%20can%20benefit%20our,gardens%2C%20the%20fewer%20incidents%20of%20stress%20they%20suffered.">Gardening ideas for wellbeing.</a><hr>
+                <li>Listen to the sounds of nature</li>
+                <img src="/static/images/naturesounds.jpg" class="naturesounds-img" th:src="@{images/naturesounds.jpg}"/>
+                <br><a href="https://www.bbc.co.uk/mediacentre/2021/soundscapes-for-wellbeing">Nature sound recommendations.</a><hr>
+                <li>Exercise outdoors</li>
+                <img src="/static/images/outdoorexercise.jpg" class="outexercise-img" th:src="@{images/outdoorexercise.jpg}"/>
+                <br><a href="https://8minutefitness.com/a-list-of-35-fun-ideas-for-outdoor-exercise-activities/">Ideas for outdoor exercise.</a>
+                <br><a href="https://wales.org/things-to-do-in-wales/adventures-and-activities/hiking/">Best walking spots in Wales.</a><hr>
+                <li>Connect with animals</li>
+                <img src="/static/images/natureanimal.jpg" class="nanimal-img" th:src="@{images/natureanimal.jpg}"/>
+                <br><a href="https://spafinder.com/blog/mindset/connect-nature-connecting-animals/">Connecting with animals.</a><hr>
+
+            </ul>
+        </div>
+
+    </section>
+
+        <footer th:replace="fragments::footer"></footer>
+
+
+
+</body>
+</html>

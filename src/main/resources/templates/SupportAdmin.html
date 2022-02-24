@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+
+<!-- Navbar located in SupportFragments template that can be accessible by loge on users only-->
+<nav th:replace="SupprotFragments::Nav"></nav>
+<!--end of navbar-->
+
+<!-- Header -->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Admin area</h1>
+</header>
+<main>
+<!--End of Header-->
+<p class="float-right">You loged on as: <span sec:authentication="name"> User</span> </p>
+<div class="col-md-2">
+    <a  href="http://localhost:8080/bookSessionAdmin">Edit practitioners</a><br>
+    <a  href="http://localhost:8080/SessionAdmin">Edit link of Stories </a>
+    <div>
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" class="btn btn-primary btn-sm" value="Logout" />
+        </form>
+    </div>
+</div>
+<!--break for navbar- looking good    -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</main>
+</body>
+</html>

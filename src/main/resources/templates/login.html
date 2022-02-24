@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/Login.css">
+    <title>Admin Login</title>
+</head>
+<!--login page for admin-->
+<body>
+<div class="login">
+    <h2>Admin login</h2>
+    <div class="login_box">
+        <input type="text" id="username" name="username" placeholder="UserName">
+    </div>
+    <div class="login_box">
+        <input type="password" id="password" name="password" placeholder="Password">
+    </div>
+    <button onclick="test()">login</button>
+
+</div>
+</body>
+<script>
+    function test() {
+        // get the value of username and password by using Javascript
+        let username = document.getElementById("username").value
+        let password = document.getElementById("password").value
+        // create a new object
+        let data = {}
+        // assign a value to object
+        // key:username,value username
+        data.username = username
+        //key:password,value:password
+        data.password = password
+        // Convert object to JSON string
+        let json_data = JSON.stringify(data)
+        // If both username and password are entered, the ajax request is returned to invoke the sever
+        if (username && password) {
+            $.ajax({
+                // url
+                url: "/Add",
+                // method
+                type: "POST",
+                // request body
+                data: json_data,
+                dataType: "text",
+                // request head
+                contentType: "application/json;charset=UTF-8",
+                // success callback
+                success: function (reps) {
+                    if (reps === "success") {
+                        window.location.href = "/admin/news/select"
+                    } else {
+                        alert("Login error, please login again")
+                    }
+                }
+            })
+        } else { // tips: whether to enter the username and password
+            if(username) {
+                // tips: do not enter the password
+                alert("please input password")
+            } else {
+                // tips:do not enter the username
+                alert("please input username")
+            }
+        }
+
+    }
+
+
+</script>
+</html>

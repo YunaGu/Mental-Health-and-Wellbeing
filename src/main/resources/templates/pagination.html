@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="paginationTest::commonHeader('Pagination')">
+    <link rel="stylesheet" href="../static/css/pagination.css" th:href="@{/css/pagination.css}"type="text/css">
+</head>
+<body>
+<div th:replace="paginationTest::pagination"></div>
+
+<script src="/js/pagination.js" type="text/javascript" rel="script"></script>
+<script src="/js/pagination1.js" type="text/javascript" rel="script"></script>
+
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+
+
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">You need Help</h1>
+</header>
+
+<!--start of main body-->
+<main>
+    <div class="float-right">
+        <form action="#" th:action="@{/logout}" method="post">
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
+
+    <!--    <p class="float-right">-->
+    <!--        <a th:action="@{/logout}" method="post">Logout</a>-->
+    <!--    </p>-->
+
+    <!--    contact section -->
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <p class="lead text-muted">If you have any mental health problem please contact with our practicinaors.</p>
+                <p>
+                    <a href="http://localhost:8080/bookSession" class="btn btn-primary my-2">Reserve a live session</a>
+                    <a href="http://localhost:8080/postContactFormHTMLReturn" class="btn btn-secondary my-2">Contact us</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--    End of contact section-->
+
+    <h2 class="fw-light" align="center">Tidy Butt mental health stories</h2>
+    <br>
+    <div class="album py-5 bg-light">
+        <!--    container for video frames-->
+        <div class="container">
+            <div class="row">
+                <!--                iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe1" width="100%" height="225" th:src="${iframes[0].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <button type="button" onclick="showIframeEditForm('iframe1Form')" class="btn btn-sm">Edit</button>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe1" class="form-inline" name="iframe1Form" id="iframe1Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe1','iframe1Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe2" width="100%" height="225" th:src="${iframes[1].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe2Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe2" class="form-inline" name="iframe2Form" id="iframe2Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe2','iframe2Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe  id="iframe3" width="100%" height="225" th:src="${iframes[2].link}" class="embed-responsive-item"
+                                 allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe3Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe3" class="form-inline" name="iframe3Form" id="iframe3Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe3','iframe3Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe4" width="100%" height="225" th:src="${iframes[3].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe4Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe4" class="form-inline" name="iframe4Form" id="iframe4Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe4','iframe4Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe5" width="100%" height="225" th:src="${iframes[4].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe5Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe5" class="form-inline" name="iframe5Form" id="iframe5Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe5','iframe5Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe6" width="100%" height="225" th:src="${iframes[5].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe6Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe6" class="form-inline" name="iframe6Form" id="iframe6Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe6','iframe6Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe7" width="100%" height="225" th:src="${iframes[6].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe7Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe7" class="form-inline" name="iframe7Form" id="iframe7Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe7','iframe7Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe8" width="100%" height="225" th:src="${iframes[7].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe8Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe8" class="form-inline" name="iframe8Form" id="iframe8Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe8','iframe8Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe id="iframe9" width="100%" height="225" th:src="${iframes[8].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <!--the form bellow is hidden when admin presses the Edit button it appears-->
+                                    <button type="button" onclick="showIframeEditForm('iframe9Form')" class="btn btn-sm">Edit</button>
+                                </div>
+                                <div>
+                                    <form action="/UpdateIframe9" class="form-inline" name="iframe9Form" id="iframe9Form"  style="display: none;">
+                                        <input type="text" class="form-floating" name="newLink">
+                                        <button type="submit" onclick="return changeIframeSource('iframe9','iframe9Form')" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of iframes-->
+            </div>
+            <!--  End of containers for video frames-->
+        </div>
+    </div>
+
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h2 class="fw-light">send us your own story</h2>
+                <!--                <p class="lead text-muted">If you have any mental health problem please contact with our practicinaors.</p>-->
+                <p>
+                    <a href="http://localhost:8080/SendStory" class="btn btn-primary my-2">send us your story</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--back to to top link -->
+    <p class="float-right">
+        <a href="#">Back to top</a>
+    </p>
+    <!--End back to top to link -->
+
+    <!-- Footer -->
+    <footer th:replace="fragments::footer"></footer>
+    <!-- End of footer -->
+</main>
+
+<!--Custom css link-->
+<script src="/js/iJava.js"></script>
+
+</body>
+</html>

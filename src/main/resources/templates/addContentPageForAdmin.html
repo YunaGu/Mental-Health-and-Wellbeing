@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Tidy Butt</title>
+</head>
+<!-- Head-->
+<head th:replace="fragments::head">
+</head>
+<!--End of Head-->
+<!--HTML for addContent Page-->
+<body>
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Add Content</h1>
+</header>
+<!--End of heading banner-->
+<div class="form">
+    <div class="form-area">
+        <div class="mb-3">
+            <input type="text" class="form-control" id="title" placeholder="Title">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="authorName" placeholder="AuthorName">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="text" rows="6" placeholder="Content"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="file" id="file" name="file" onchange="submitFile(this)">
+        </div>
+        <center>
+            <button class="btn btn-primary" th:onclick="add()">upload</button>
+        </center>
+    </div>
+</div>
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</body>
+
+<!--CSS for addContent Page-->
+<style>
+    .form-area {
+        width: 400px;
+        margin: 20px auto;
+    }
+</style>
+
+<script type="text/javascript">
+    //global variable
+    let a = null
+
+    // submit file by ajax
+    function submitFile(that) {
+        let formData = new FormData()
+        formData.append("file", $(that).get(0).files[0])
+        $.ajax({
+            url: "/fileUpload",
+            type: "POST",
+            // request body
+            data: formData,
+            //request head
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            success: function (reps) {
+                if (reps !== "error") {
+                    // string is divided into array, with '/' as the division condition
+                    let reps_split = reps.split("/")
+                    // pop
+                    let last = reps_split.pop()
+                    let last2 = reps_split.pop()
+                    a = "/" + last2 + "/" + last
+                } else {
+                    alert("failed upload, please refresh page and upload .jpg file")
+                }
+
+            }
+        })
+    }
+
+    function add() {
+        let title = $("#title").val();
+        let authorName = $("#authorName").val();
+        let text = $("#text").val();
+        let newsContent = {
+            title: title,
+            authorName: authorName,
+            text: text,
+            image: a
+        }
+        $.ajax({
+            url: "/news/add",
+            type: "POST",
+            data: JSON.stringify(newsContent),
+            dataType: "text",
+            contentType: "application/json;charset=UTF-8",
+            success: function (reps) {
+                var result = eval("(" + reps + ")");
+                alert(result.message)
+            }
+        })
+    }
+</script>
+</html>
+
+

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"><title>Tidy Butt</title></head>
+<!--End of Head-->
+
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+
+<!--  End of navbar  -->
+
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">News</h1>
+</header>
+
+<!--Start of news main section-->
+<div class="container news-container news-main">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">
+            <img class="newsThumb mb-3" src="/static/images/tidybuttnewspic1.jpg"
+                 th:src="@{images/tidybuttnewspic1.jpg}"/>
+            <h3>
+                <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+            </h3>
+        </div>
+        <div class="col-sm-12 col-md-6 col-xs-12 col-lg-6">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                    <div class="newsImage news-image-small mb-3">
+                        <img class="newsThumb" src="/static/images/newspic2.jpg" th:src="@{images/newspic2.jpg}"/>
+                    </div>
+                    <h5>
+                        <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                    </h5>
+                    <div class="newsImage news-image-small mb-3">
+                        <img class="newsThumb" src="/static/images/newspic3.jpg" th:src="@{images/newspic3.jpg}"/>
+                    </div>
+                    <h5>
+                        <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                    </h5>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+
+                    <div class="newsImage news-image-small mb-3">
+                        <img class="newsThumb" src="/static/images/newspic4.jpg" th:src="@{images/newspic4.jpg}"/>
+                    </div>
+                    <h5>
+                        <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                    </h5>
+                    <div class="newsImage news-image-small mb-3">
+                        <img class="newsThumb" src="/static/images/newspic5.jpg" th:src="@{images/newspic5.jpg}">
+                    </div>
+                    <h5>
+                        <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container news-container mt-4">
+        <div class="news-section-title">
+            <span>Recent News</span>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                <div class="mb-2 newsImage news-image-small">
+                    <img src="/static/images/nwstory1.jpg" class="newsThumb" th:src="@{images/nwstory1.jpg}"/>
+                </div>
+                <a href="https://www.bbc.co.uk/news/topics/cjxv13v27dyt/fake-news">More information regarding the
+                    news.... </a>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                <div class="mb-2 newsImage news-image-small">
+                    <img src="/static/images/nwstory2.jpg" class="newsThumb" th:src="@{images/nwstory2.jpg}"/>
+                </div>
+                <a href="https://www.bbc.co.uk/news/topics/cjxv13v27dyt/fake-news">More information regarding the
+                    news.... </a>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                <div class="mb-2 newsImage news-image-small">
+                    <img src="/static/images/nwstory3.jpg" class="newsThumb" th:src="@{images/nwstory3.jpg}"/>
+                </div>
+                <a href="https://www.bbc.co.uk/news/topics/cjxv13v27dyt/fake-news">More information regarding the
+                    news.... </a>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3">
+                <div class="mb-2 newsImage news-image-small">
+                    <img class="newsThumb mb-3" src="/static/images/nwstory4.jpg" th:src="@{images/nwstory4.jpg}"/>
+                </div>
+                <a href="https://www.bbc.co.uk/news/topics/cjxv13v27dyt/fake-news">More information regarding the
+                    news.... </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container news-container section-divider">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="mb-4 mt-4">
+                    <div class="news-section-title">
+                        <span>Title for news topic [Meet-ups]</span>
+                    </div>
+                    <div class="row mb-3 pt-0 news-divider">
+                        <div class="col-md-4 col-lg-4 col-sm-12">
+                            <img src="/static/images/newstopic1.jpg" class="newsThumb"
+                                 th:src="@{images/newstopic1.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <h5>
+                                <a href="https://uktie.eu/uk-transport-brexit-news-views-no-42/">More information
+                                    regarding the news.... </a>
+
+                            </h5>
+                            <small class="news-date">10th January, 2021</small>
+                            <p class="pt-3 news-summary">lorem ipsum dolor sit amet amet amet lorem ipsum dolor sit amet
+                                amet amet </p>
+                        </div>
+                    </div>
+                    <div class="row mb-3 pt-0 news-divider">
+                        <div class="col-md-4 col-lg-4 col-sm-12">
+                            <img src="/static/images/newstopic2.jpg" class="newsThumb"
+                                 th:src="@{images/newstopic2.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <h5>
+                                <a href="https://uktie.eu/uk-transport-brexit-news-views-no-42/">More information
+                                    regarding the news.... </a>
+                            </h5>
+                            <small class="news-date">10th January, 2021</small>
+                            <p class="pt-3 news-summary">lorem ipsum dolor sit amet amet amet lorem ipsum dolor sit amet
+                                amet amet </p>
+                        </div>
+                    </div>
+                    <div class="row mb-3 pt-0 news-divider">
+                        <div class="col-md-4 col-lg-4 col-sm-12">
+                            <img src="/static/images/newstopic3.jpg" class="newsThumb"
+                                 th:src="@{images/newstopic3.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <h5>
+                                <a href="https://uktie.eu/uk-transport-brexit-news-views-no-42/">More information
+                                    regarding the news.... </a>
+                            </h5>
+                            <small class="news-date">10th January, 2021</small>
+                            <p class="pt-3 news-summary">lorem ipsum dolor sit amet amet amet lorem ipsum dolor sit amet
+                                amet amet </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="section-divider upcoming-events mt-4">
+                    <div class="news-section-title">
+                        <span>Upcoming Events? ideas? </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img src="/static/images/event1.jpg" class="newsThumb" th:src="@{images/event1.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img src="/static/images/event2.jpg" class="newsThumb" th:src="@{images/event2.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img src="/static/images/event3.jpg" class="newsThumb" th:src="@{images/event3.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                            <img src="/static/images/event4.jpg" class="newsThumb" th:src="@{images/event4.jpg}"/>
+                        </div>
+                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                            <a href="https://www.facebook.com/tidybuttmat">More information regarding the news.... </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--sign-up form that uses post request to send data to mysql table-->
+<div class="container news-container section-divider">
+    <form name="signupForm" th:action="@{/newspage}" method="POST" class="meetup-signup-form"
+          onsubmit="validate_checkbox();">
+        <h3 class="signup-title">Sign-up to know when our next meet-up is! </h3>
+        <div class="">
+            <input type="text" name="first_name" id="first_name" minlength="2" maxlength="20" pattern="[a-zA-Z]+"
+                   onblur="validate_fname();" placeholder="First Name (Optional)">
+            <input type="text" name="last_name" id="last_name" minlength="2" maxlength="20" pattern="[a-zA-Z]+"
+                   onblur="validate_lname();" placeholder="Last Name (Optional)">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="recipient_email" id="recipient_email" minlength="6" maxlength="40" size="40"
+                   onblur="validate_email();" required placeholder="Email address (Required)">
+            <button type="submit" class="meetup-signup-btn" name="signup-btn">Sign up</button>
+        </div>
+        <div>
+            <input type="checkbox" class="newsletter-checkbox" id="newsletter-checkbox" required>
+            <label for="newsletter-checkbox" class="checkbox-label" id="checkbox-label"><small>I agree to allow TidyButt
+                to store my email and send me notifications.</small></label>
+        </div>
+    </form>
+</div>
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+<script th:src="@{js/signupFormValidation.js}" type="text/javascript"></script>
+
+</body>
+
+
+
+
+</html>

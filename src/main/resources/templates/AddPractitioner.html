@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<!--customized css file-->
+<link th:href="@{css/style_mehdi.css}" rel="stylesheet"/>
+
+<!--Fitness heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Add new practitioner here</h1>
+</header>
+<main>
+
+    <h2>Add a new Practitioner</h2>
+    <!--    form to add a practitioner. there is a validation java program for this form-->
+    <form name='AddForm' action='/AddPractitioner/' onsubmit="return addFormValidation('AddForm')" method='get' align="left">
+        <label class="required">Name: <input type="text" name="firstName"></label><br>
+        <label class="required">Surname: <input type="text" name="lastName"></label><br>
+        <label class="required">Email: <input type="email" placeholder="email@example.com" name="email"></label><br>
+        <label class="required">Status?(True, False): <input type="text" name="status" ></label><br>
+        <button type="submit" class="btn btn-primary"> Submit</button><br>
+    </form>
+    <!--    end of form-->
+
+</main>
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+
+<!--custom java script source-->
+<script src="/js/iJava.js"></script>
+
+</body>
+</html>

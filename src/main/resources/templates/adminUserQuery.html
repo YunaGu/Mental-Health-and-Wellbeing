@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xlmns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="MemberNavFragment::Member-Nav"></nav>
+
+<!--  End of navbar  -->
+<link th:href="@{css/userquery.css}" rel="stylesheet"/>
+
+<!--Learning heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">User Query Page</h1>
+</header>
+
+<!--This table shows the user details and query from the contact form data stored in the  database. -->
+
+<section class ="motivquotes">
+    <div class="meet col text-center mb-5">
+      <div class="table-responsive ">
+        <table class="content-table">
+            <thead>
+            <tr>
+                <th style="width: 22%;">ID</th>
+                <th style="width: 22%;">Firstname</th>
+                <th style="width: 22%;">Lastname</th>
+                <th style="width: 22%;">Email</th>
+                <th style="width: 22%;">Query</th>
+            </tr>
+            </thead>
+            <tr th:each="query: ${queries}">
+                <td th:text="${query.ID}"></td>
+                <td th:text="${query.firstname}"></td>
+                <td th:text="${query.lastname}"></td>
+                <td th:text="${query.email}"></td>
+                <td th:text="${query.message}"></td>
+            </tr>
+        </table>
+      </div>
+    </div>
+</section>
+
+<footer th:replace="fragments::footer"></footer>
+
+</body>
+</html>

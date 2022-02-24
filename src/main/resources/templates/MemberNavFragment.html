@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!-- Membersgit  nav bar (only can be viewed by logged in members) -->
+<nav th:fragment="Member-Nav" class="navbar navbar-expand-md navbar- fixed-top brand-name" style="background-color: #522d80">
+
+    <a class ="navbar-logo" href="http://localhost:8080/index"><img class="" src="https://static.wixstatic.com/media/f0b99f_5685b75a314143bebbefd37f4ba3ad36~mv2.png/v1/fill/w_230,h_182,al_c,q_85,usm_0.66_1.00_0.01/TB_LOGO.webp"> </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbar">
+        <ul class="navbar-nav">
+
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="http://localhost:8080/adminIndex">Admin Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                        class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+                        data-toggle="dropdown" href="#">Resources</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://localhost:8080/nutrition">Nutrition</a>
+                    <a class="dropdown-item" href="http://localhost:8080/sleep">Sleep</a>
+                    <a class="dropdown-item" href="http://localhost:8080/learning">Learning</a>
+                    <a class="dropdown-item" href="http://localhost:8080/nature">Nature</a>
+                    <a class="dropdown-item" href="http://localhost:8080/fitness">Fitness</a>
+                    <a class="dropdown-item" href="http://localhost:8080/video">Video</a>
+                    <a class="dropdown-item" href="http://localhost:8080/socialMedia">Social Media</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                        class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+                        data-toggle="dropdown" href="#">Support</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://localhost:8080/quizList">Quiz</a>
+                    <a class="dropdown-item" href="http://localhost:8080/session">Our Stories</a>
+                    <a class="dropdown-item" href="http://localhost:8080/SendStory">Send your Story</a>
+                    <a class="dropdown-item" href="http://localhost:8080/bookSession">Book an Online Session</a>
+                    <a class="dropdown-item" href="http://localhost:8080/SupportAdmin">Admin tasks</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/newspage">News</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/postContactFormHTMLReturn">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="http://localhost:8080/reviews">Reviews</a>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/membersArea">Members Area</a></li>
+            <li class="nav-item dropdown">
+                <a
+                        class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+                        data-toggle="dropdown" href="#">Extra Materials</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://localhost:8080/membersArea/extraMaterials">Extra Materials Overview</a>
+                    <a class="dropdown-item" href="http://localhost:8080/membersArea/extraMaterials/meditation">Meditation</a>
+                    <a class="dropdown-item" href="http://localhost:8080/membersArea/extraMaterials/motivation">Motivation</a>
+                    <a class="dropdown-item" href="http://localhost:8080/membersArea/extraMaterials/wellbeing">Well-being</a>
+                    <a class="dropdown-item" href="http://localhost:8080/membersArea/extraMaterials/massage">Massage</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a
+                        class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+                        data-toggle="dropdown" href="#">Staff</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://localhost:8080/viewMembers">View Members</a>
+                    <a class="dropdown-item" href="http://localhost:8080/viewRecipients">View Event Attendees</a>
+                    <a class="dropdown-item" href="http://localhost:8080/adminUserQuery">View User Queries</a>
+                </div>
+        </ul>
+
+    </div>
+</nav>
+</body>
+</html>

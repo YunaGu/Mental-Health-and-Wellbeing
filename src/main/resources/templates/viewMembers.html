@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org/">
+<!--Problem with thymeleaf is fixed by removing "www" from above. Unsure why this bug is happening.-->
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="MemberNavFragment::Member-Nav"></nav>
+<!--  End of navbar  -->
+
+<!--stylesheets-->
+<link th:href="@{css/userquery.css}" rel="stylesheet"/>
+<!--todo make this table look nicer & form-->
+
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Members</h1>
+</header>
+
+<div class="centre" >
+<!--    <div>-->
+        <!--    Form that allows for an admin to input user ID from table below and delete a member-->
+        <form th:action='@{/viewMembers}' id="deleteMemberForm" method="post">
+            <label>Enter User ID :
+                <input type="number" id="user_ID" name="user_ID" required minlength="1" max="9999">
+            </label>
+            <button type="submit" class="admin-delete-btn">Delete</button>
+        </form>
+    <!--Table that uses thymeleaf in order to display each individual user from the mysql table-->
+<!--    <div class="table-responsive">-->
+        <table class="content-table">
+            <thead>
+            <tr>
+                <th style="width: 22%";>User ID:</th>
+                <th style="width: 22%;">Username:</th>
+            </tr>
+            </thead>
+            <tr th:each="member: ${members}">
+                <td th:text="${member.user_ID}"></td>
+                <td th:text="${member.username}"></td>
+            </tr>
+        </table>
+    </div>
+<!--</div>-->
+
+<!--</section>-->
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</body>
+
+
+<script>
+// declaring variables from viewMembers page
+    const deleteForm = document.getElementById('deleteMemberForm');
+    const id = document.getElementById('user_ID')
+
+    //event listener that prevents form submitting unless validation method passes, if it is valid submit form and send alert to admin
+    deleteForm.addEventListener('submit', function validateDeleteForm(e) {
+        validate_deleteID(e);
+        alert("User ID: " + id.value + " has been deleted");
+    });
+
+    //function that validates input (if id is not 0 or less) returns false if its invalid
+    let validate_deleteID = function(e) {
+        if (id.value <= 0) {
+            alert('Please enter a valid number from the table.');
+            e.preventDefault();
+        }
+    }
+</script>
+</html>

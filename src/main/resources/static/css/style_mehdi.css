@@ -1,0 +1,31 @@
+.my_class {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.my_class-title {
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+    color: black;
+}
+/*font and color for all headers*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    color: black;
+}
+/*font for paragraphs*/
+p{
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+/*for the container class located in SendStory.html*/
+.container img {
+    float: right;
+    margin-left: 2rem;
+}
+
+/*insert red Astrix after all required fields*/
+.required:after {
+    content:" *";
+    color: red;
+}

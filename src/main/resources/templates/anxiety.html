@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link href="../static/CSS/quizList.css" th:href="@{/CSS/quizList.css}" rel="stylesheet" type="text/css">
+
+<body>
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+<div>
+    <div class="main">
+
+        <!--        carousel        -->
+        <div class="carousel" th:each="quiz : ${anxiety}">
+
+            <span class="card">
+                <div class="content">
+                    <h1 class="Qheader" th:text="${quiz.id}">Heading 1</h1>
+                    <div class="questions" th:text="${quiz.question}"></div>
+                    <form class="options">
+                        <input type="radio" class="option" th:name="${quiz.id}" th:text="${quiz.optionA}" value="1" required><br>
+                        <input type="radio" class="option" th:name="${quiz.id}" th:text="${quiz.optionB}" value="2" required><br>
+                        <input type="radio" class="option" th:name="${quiz.id}" th:text="${quiz.optionC}" value="3" required><br>
+                        <input type="radio" class="option" th:name="${quiz.id}" th:text="${quiz.optionD}" value="4" required><br>
+                        <input type="radio" class="option" th:name="${quiz.id}" th:text="${quiz.optionE}" value="5" required><br>
+                    </form>
+                </div>
+            </span>
+
+        </div>
+        <!--        end of carousel        -->
+
+        <input class="submit" type="button" value="submit" th:onclick="submit()">
+    </div>
+</div>
+
+
+<footer th:replace="fragments::footer"></footer>
+
+<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+
+<script src="/JS/submit.js" th:src="@{/JS/submit.js}" rel="script" type="text/javascript"></script>
+
+
+
+</body>
+
+</html>

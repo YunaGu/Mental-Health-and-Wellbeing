@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+
+
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">You need Help</h1>
+</header>
+
+<!--start of main body-->
+<main>
+
+
+    <!--    contact section -->
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <p class="lead text-muted">If you have any mental health problem please contact with our practicinaors.</p>
+                <p>
+                    <a href="http://localhost:8080/bookSession" class="btn btn-primary my-2">Reserve a live session</a>
+                    <a href="http://localhost:8080/postContactFormHTMLReturn" class="btn btn-secondary my-2">Contact us</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--    End of section-->
+
+    <h2 class="fw-light" align="center">Tidy Butt mental health stories</h2>
+    <br>
+    <!--    <form name='ShowAll' action='/showIframes' method='get'>-->
+    <div class="album py-5 bg-light">
+        <!--    container for video frames-->
+        <div class="container" >
+            <div class="row"  >
+                <!--iframe placeholder -->
+                <div class="col-md-4" >
+                    <iframe width="100%" height="225" th:src="${iframes[0].link}" class="embed-responsive-item"
+                            allow="accelerometer; autoplay " allowfullscreen></iframe>
+                    <div class="card-body">
+                        <p class="card-text">brief data about the story, brief data about the story</p>
+                    </div>
+
+                </div>
+                <!--                iframe placeholder-->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[1].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[2].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[3].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[4].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[5].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[6].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a
+                                natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[7].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--iframe placeholder -->
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <iframe width="100%" height="225" th:src="${iframes[8].link}" class="embed-responsive-item"
+                                allow="accelerometer; autoplay " allowfullscreen></iframe>
+                        <div class="card-body">
+                            <p class="card-text">brief data about the story, brief data about the story</p>
+                        </div>
+                    </div>
+                </div>
+                <!--end of iframes -->
+            </div>
+            <!--  End of containers for video frames-->
+        </div>
+    </div>
+    <!--section for some links-->
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h2 class="fw-light">send us your own story</h2>
+                <p>
+                    <a href="http://localhost:8080/SendStory" class="btn btn-primary my-2">send us your story</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--end of section-->
+
+    <!--back to to top link -->
+    <p class="float-right">
+        <a href="#">Back to top</a>
+    </p>
+    <!--End back to top to link -->
+
+    <!-- Footer -->
+    <footer th:replace="fragments::footer"></footer>
+    <!-- End of footer -->
+    <!--    </form>-->
+</main>
+
+<!--Custom css link-->
+<script src="/js/iJava.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<body>
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<!--Fitness heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Healthy Food</h1>
+</header>
+<!--End of Fitness heading banner-->
+
+<!-- START THE FEATURETTES -->
+<div class="row featurette">
+    <div class="col-md-7">
+        <h1 class="featurette-heading">
+            Eat good.
+            <span class="text-muted">Feel good.</span>
+        </h1>
+        <p class="lead">The foods we eat can have a big impact on the structure and health of our brains.
+            Eating a brain-boosting diet can support both short- and long-term brain function.
+            <a href="https://www.everydayhealth.com/depression-pictures/feel-better-foods.aspx">Read more</a>
+        </p>
+
+    </div>
+    <div class="col-md-5">
+        <img class="img-fluid" src="http://localhost:8080/images/nut-3.png">
+
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">My advice.
+            <span class="text-muted">We are what we eat!</span>
+        </h2>
+        <p class="lead">Nutrients such as omega-3 fatty acids, vitamin D, and flavonoids are linked to maintenance of thinking skills in older age.
+            High levels of saturated fat (e.g. in butter, palm oil, dairy, meat) are linked to worsening of thinking skills in older age.</p>
+        <a href="https://brainworldmagazine.com/are-we-what-we-eat/">Read more</a>
+    </div>
+    <div class="col-md-5">
+        <img class="img-fluid" src="http://localhost:8080/images/nut-4.png">
+
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">Food and mood  <span class="text-muted">- what’s the link?</span></h2>
+        <p class="lead">It is well known that unhealthy eating patterns can cause mood swings.
+            Blood sugar fluctuations and nutritional imbalances are often to blame.
+        </p>
+        <a href="https://brainworldmagazine.com/are-we-what-we-eat/">Read more</a>
+    </div>
+    <div class="col-md-5">
+        <img class="img-fluid" src="http://localhost:8080/images/nut-1.png">
+    </div>
+</div>
+<hr class="featurette-divider">
+
+<!--more content featurette-->
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">Do you need more content
+<!--            <span class="text-muted">go to links below</span>-->
+        </h2>
+        <a href="https://blabla">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+        <br>
+        <a href="https://blabla/">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+        <br>
+        <a href="https://blabla/">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+        <br>
+        <a href="https://blabla/">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+
+    </div>
+    <div class="col-md-5">
+        <img class="img-fluid" src="http://localhost:8080/images/nut-2.png">
+    </div>
+</div>
+<hr class="featurette-divider">
+<!--end of more content featurette-->
+</div>
+
+<style>
+    /*css for nutriton.html page*/
+    /*---------------------------------------*/
+    /* Featurettes
+    ------------------------- */
+    .featurette-divider {
+        margin: 2rem 0; /* Space out the Bootstrap <hr> more */
+    }
+    /* Thin out the marketing headings */
+    .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -.05rem;
+    }
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+    @media (min-width: 40em) {
+
+        .featurette-heading {
+            font-size: 50px;
+        }
+    }
+    @media (min-width: 62em) {
+        .featurette-heading {
+            margin-top: 7rem;
+        }
+    }
+    /*end of css for nutriton.html page*/
+</style>
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</body>
+</html>

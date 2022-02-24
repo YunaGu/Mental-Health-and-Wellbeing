@@ -1,0 +1,23 @@
+!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+
+<!--  Navbar  -->
+<nav th:replace="MemberNavFragment::Member-Nav"></nav>
+
+<!--  End of navbar  -->
+<div class="layout-main-div">
+    <h2 id="title1" class="error-403-title"><b>You do not have access to this page, this is for staff only.<br> Please go somewhere else using the navigation bar at the top.</b> <br><br> If you think this is an error, and you should be able to access this page, please<a
+            href="http://localhost:8080/postContactFormHTMLReturn"> let us know.</a></h2>
+</div>
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</body>
+
+</html>

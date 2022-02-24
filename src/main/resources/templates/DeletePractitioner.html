@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<!--Fitness heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Delete practitioner</h1>
+</header>
+<main>
+    <h4>Use the ID of the Practitioner to delete it</h4>
+    <br>
+    <!--    form for deleting a practotioner, There is a validation java program for this form-->
+    <form name='DeleteForm' action='/DeletePractitioner/' onsubmit="return formValidation('DeleteForm','ID')" method="get">
+        <label>Practitioner ID : <input type="number" name="ID"></label>
+        <button type="submit" class="btn btn-primary btn-sm"> Submit</button>
+    </form>
+    <!--    end of form-->
+</main>
+
+<!-- Footer -->
+<!--<footer th:replace="fragments::footer"></footer>-->
+<!-- End of footer -->
+
+<!--custom java script source-->
+<script src="/js/iJava.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.turn-page-wrapper > * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.turn-page-wrapper > li, .turn-page-wrapper > span {
+    float: left;
+    margin: 0 5px;
+}
+.turn-page-wrapper > li {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.turn-page-wrapper::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.turn-page-wrapper > li.current-page {
+    background-color: rebeccapurple;
+    color: white;
+}

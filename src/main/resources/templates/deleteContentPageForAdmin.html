@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Tidy Butt</title>
+</head>
+<!-- Head-->
+<head th:replace="fragments::head">
+</head>
+<!--End of Head-->
+<!--CSS for delete content page-->
+<style>
+    table {
+        margin-top: 30px;
+        border-collapse: collapse;
+    }
+    #table {
+        margin: 10px;
+    }
+
+    thead {
+        background: #dcdcdc;
+    }
+
+    table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 98%;
+    }
+
+    table, table td {
+        border: 1px solid #000;
+    }
+
+    table td {
+        padding: 10px 0px;
+    }
+
+    table th {
+        text-align: center;
+        padding: 5px 0px;
+    }
+    tr td {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-word;
+    }
+
+    tr td:hover {
+        overflow: auto;
+        white-space: normal;
+        text-overflow: initial;
+        word-break: break-word;
+    }
+
+    tr td, tr th {
+        border: 1px solid gray;
+        line-height: 35px;
+        text-align: center;
+
+    }
+
+</style>
+<!--HTML for delete page-->
+<body>
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Delete Content</h1>
+</header>
+<!--End of heading banner-->
+<div>
+
+    <table id="table">
+        <thead>
+        <tr>
+            <th>title</th>
+            <th>authorname</th>
+            <th>text</th>
+            <th>image</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="news : ${list}">
+            <td th:text="${news.title}"></td>
+            <td th:text="${news.authorName}"></td>
+            <td th:text="${news.text}"></td>
+            <td th:text="${news.image}"></td>
+            <td>
+                <button class="btn btn-danger" th:onclick= "|javascript:deleted('${news.id}')|">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</html>
+<script>
+    function deleted(id) {
+        $.ajax({
+            url:"/news/delete/" + id,
+            type:"GET",
+            success(res) {
+                alert(res)
+                location.reload()
+            }
+        })
+        console.log(id)
+    }
+</script>

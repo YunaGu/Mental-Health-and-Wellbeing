@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+
+<!--customized css file-->
+<link th:href="@{css/style_mehdi.css}" rel="stylesheet"/>
+
+<!--Fitness heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle" class="my_class-title">Send us Your Story</h1>
+</header>
+<main class="container">
+    <article class="my_class">
+        <h2 class="my_class-title">What is a story</h2>
+        <div class="container">
+            <img class="img-responsive" src="/images/tbmeet.jpg" alt="Chania" width="450" height="500">
+            <p>Sometimes the best mental health advice we get is not from professionals but from people who've been
+                through the same thing as us. That's why we want you to share your experience in a mental health story.</p>
+        </div>
+
+        <h2 class="my_class-title">How to send story </h2>
+        <p>We're really glad that you've decided to send us your mental health story.
+            At Tidy Butt we know that real people's experiences help people facing mental health problems.
+            Before you send us your story, please read these Terms and Conditions carefully. If you agree to them,
+            tick 'yes' and then click 'next'. *Please note that we can only accept submissions of stories from people
+            over 18. </p>
+        <h4>I (you) agree that:</h4>
+        <ul>
+            <li>I give permission for Tidy Butt to use my video in
+                the Tidy Butt website and other Tidy Butt sites including social media (e.g. Youtube, Facebook, Twitter
+                etc.) as part of their work to support people with mental health problems
+            </li>
+            <li>I am happy that they can share it via email social media (such as Facebook and Twitter) and in emails to
+                their supporters.
+            </li>
+            <li>I am happy that they may use my mental health story in communications with potential or actual partners
+                and supporters (e.g. internal and external training, possible donors, corporate partnerships etc.).
+            </li>
+            <li>I agree that I am happy for them to edit parts of my 'mental health story' and that they may go
+                alongside other professional or volunteer's videos.
+            </li>
+            <li>This vlog is mine, I filmed it myself and anyone who appears has agreed to feature.</li>
+        </ul>
+        <h4>We (Tidy Butt) agree that:</h4>
+        <ul>
+            <li>We will host your video on our Youtube channel and moderate and manage comments on your behalf.</li>
+            <li>We will not use your information for anything other than to contact you about the mental health story
+                project (See our privacy policy).
+            </li>
+            <li>Most importantly: If you change your mind about us using your video, and you want us to take it down,
+                you can contact through contact@tidybutt.co.uk and we will do so as soon as we can.
+            </li>
+        </ul>
+
+        <h6>I have read, and agree to the terms and conditions above*:</h6>
+
+        <!--checkbox to show or hide the SendStory form. There is javascript onclick
+        function(showSendStroryForm()) for this checkbox located in iJava.js file -->
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="myCheckbox" onclick="showSendStroryForm()" name="agreement" value="yes">
+<!--                   default state: uncheck-->
+                   <unchecked>
+                        <label class="form-check-label" for="myCheckbox">Yes</label>
+                   </unchecked>
+        </div>
+        <!--        end of checkbox-->
+
+        <!--Form for sending user story. The form is hidden by default until checkbox above is checked.
+        The form is validated in iJava.js file-->
+        <form action='/SendStory/' name="SendSroty" id="SendSroty" method="get" onsubmit="return sendStoryFormValidation()"
+              style="display:none" >
+            <div class="form-group">
+                <label for="name" class="required">Your Name:
+                    <input type="text" name="name" class="form-floating" id="name">
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="required" >Your Email Address:
+                    <input type="email" name="email" class="form-floating" placeholder="name@example.com" id="email" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="birth" class="required">Date of birth:
+                    <input type="date" name="birth" id="birth" class="form-floating" placeholder="mm/dd/yyyy" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="link" class="required">Please share your story URL (link) e.g. http://youtube.com/aaaaaa:
+                    <input type="text" class="form-floating" name="link" id="link">
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary"> Submit</button>
+       </form>
+        <!--        End of form-->
+    </article>
+</main>
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+<script src="/js/iJava.js"></script>
+</body>
+</html>

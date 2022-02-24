@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org/">
+<!--Problem with thymeleaf is fixed by removing "www" from above. Unsure why this bug is happening.-->
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="MemberNavFragment::Member-Nav"></nav>
+<!--  End of navbar  -->
+
+<!--stylsheets-->
+<link th:href="@{css/userquery.css}" rel="stylesheet"/>
+
+
+<!--todo will create custom classes for this page and add more styling AFTER DEMO-->
+<!-- heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Attendees</h1>
+</header>
+
+<!--<section class="view-members">-->
+    <!--Table that uses thymeleaf in order to display each individual user from the mysql table-->
+    <div class="centre">
+        <h2 style="text-align: center; padding-bottom: 40px"> <u> Event 1 Attendees </u></h2>
+        <table class="content-table">
+            <thead>
+            <tr>
+                <th style="width: 22%;">Attendee ID:</th>
+                <th style="width: 22%;">Email:</th>
+                <th style="width: 22%;">First Name:</th>
+                <th style="width: 22%;">Last Name:</th>
+
+            </tr>
+            </thead>
+            <tr th:each="recipient: ${recipients}">
+                <td th:text="${recipient.recipient_id}"></td>
+                <td th:text="${recipient.recipient_email}"></td>
+                <td th:text="${recipient.first_name}"></td>
+                <td th:text="${recipient.last_name}"></td>
+            </tr>
+        </table>
+    </div>
+<!--</section>-->
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</body>
+
+</html>

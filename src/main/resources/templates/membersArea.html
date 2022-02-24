@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+
+<!-- Members area nav bar (only can be viewed by logged in members)  -->
+<nav th:replace="MemberNavFragment::Member-Nav"></nav>
+<!--end members nav bar-->
+
+<!-- Header -->
+<header th:replace="fragments::header">
+  <h1 id="contentPageTitle">Members Area</h1>
+</header>
+<!--End of Header-->
+
+<div style="float: left">
+  <span sec:authorize="hasRole('ADMIN')">You are currently an Admin.</span>
+  <span sec:authorize="hasRole('MEMBER')">You are currently a Member.</span>
+  </div>
+<div style="float: right">
+  <form action="#" th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout"  class="logout-btn" />
+  </form>
+</div>
+
+<div class="layout-main-div">
+  <h2 class="extra-materials-maintitle">Welcome <span sec:authentication="name"></span> to TidyButt! <br> We value your time and want to say thank you for joining our community.<br>
+  </h2>
+<h4 style="text-align: center">Please feel free to navigate through our exclusive extra materials only available to registered members.</h4>
+
+  <div style="text-align: center; padding-top: 60px;">
+  <h5>To view a preview of what materials you can learn about, you can click the button below.</h5>
+  <a class="overview-btn" href="http://localhost:8080/membersArea/extraMaterials">Overview</a>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+</body>
+</html>

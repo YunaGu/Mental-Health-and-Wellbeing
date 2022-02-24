@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<!-- Head-->
+<head th:replace="fragments::head">
+</head>
+<!--End of Head-->
+<body>
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+<!--Sleep heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Sleeping</h1>
+</header>
+
+
+<div id="class">
+
+</div>
+
+
+<h4 id="quote">"The brain basis of a mutual relationship between sleep and mental health is not yet completely
+    understood. But neuroimaging and neurochemistry studies suggest that a good night's sleep helps foster both
+    mental and emotional resilience, while chronic sleep deprivation sets the stage for negative thinking and
+    emotional vulnerability."</h4>
+
+<h2 id="title1">Why sleep so important for your mental health</h2>
+<p id="pageContent1">We spend about a third of our lives asleep. Sleep is essential - It is as important to our
+    bodies as eating, drinking and breathing, and is vital for maintaining good mental and physical health.
+    Sleeping helps us to recover from mental as well as physical exertion.</p>
+<p id="pageContent2">Sleep and health are strongly related - poor sleep can increase the risk of having poor health,
+    and poor health can make it harder to sleep. Sleep disturbances can be one of the first signs of distress. Common
+    mental health problems like anxiety and depression can often underpin sleep problems. </p>
+<img class="fitnesspic1" src="/static/images/sleep3.jpg" th:src="@{images/sleep3.jpg}"/>
+
+<h2 id="title2">How can mental health problems affect sleep?</h2>
+<p id="pageContent3">
+<h3>Mental health problems can affect your sleep in different ways.</h3>
+</p>
+<p id="pageContent4">
+<ul>
+    <li>Anxiety can cause your thoughts to race, which can make it hard to sleep.</li>
+    <li>Depression can lead to oversleeping: either sleeping late or sleeping a
+        lot during the day. It can also cause insomnia if you have troubling thoughts.
+    </li>
+    <li>Post-traumatic stress disorder (PTSD) can cause nightmares or night terrors.
+        These may wake you up and/or make you feel anxious about falling asleep.
+    </li>
+    <li>Mania can make you feel elated or energetic so you might not feel tired or want to sleep.
+        You may also have racing thoughts that make it hard to sleep.
+    </li>
+    <li>Medication can have side effects including insomnia, nightmares or oversleeping.
+        Coming off medication can also cause sleep problems.
+    </li>
+</ul>
+</p>
+<img class="fitnesspic1" th:src="@{images/sleep2.jpg}"/>
+
+<h2 id="title3">How can I improve my sleep?</h2>
+<p id="pageContent5">
+<h3>There are many things you can try to help yourself sleep well.</h3>
+</p>
+<p id="pageContent6">
+<ul>
+    <li>Establish a regular, relaxing bedtime routine that lets you unwind and sends a signal to your brain that
+        it's time to sleep.
+    </li>
+    <li>Create a restful environment: bedrooms that are dark, cool and quiet are generally easier to fall asleep
+        and stay asleep in.
+    </li>
+    <li>Try to go to sleep and wake up at the same time each day.</li>
+    <li>Exercise regularly but avoid vigorous exercise near bedtime if it affects your sleep.</li>
+    <li>Avoid caffeine and alcohol before bed. They can stop you falling asleep and prevent deep sleep.</li>
+    <li>Only use your bed for sleep or sex. Unlike most physical activity, sex makes us sleepy.</li>
+    <li>Try apps and online programmes designed to help with sleep problems such as Pzizz, Sleepio or
+        Sleepstation.
+    </li>
+    <li>Avoid using screens in the evening, including on smartphones and tablets. The light from the screen
+        can have a negative effect on sleep, and social media, news and games can all stimulate your brain
+        and make you feel anxious.
+    </li>
+    <li>Write down your worries if you lie awake worrying about tomorrow. This can help put your mind at rest.</li>
+    <li>If you can't sleep, don't worry about it. Get up and do something relaxing like listening to music or reading
+        until you feel sleepy.
+    </li>
+
+</ul>
+<img class="fitnesspic1" th:src="@{images/sleep1.jpg}"/>
+</p>
+
+<div id="furtherReading">
+    <h3 id="furtherReadingTitle1">Want to know more?</h3>
+    <h5 id="furtherReadingTitle2">There are plenty of different ways to help you get a better sleep quality.</h5>
+    <div id="furtherLinks">
+        <p id="furtherLinksContent"> Below are some resources that we think will help you on your journey:</p>
+        <ul>
+            <li id="furtherLinksListItem1">
+                <a id="furtherLink1" href="https://www.mentalhealth.org.uk/blog/importance-sleep">The importance of
+                    sleep</a>
+            </li>
+            <li id="furtherLinksListItem2">
+                <a id="furtherLink2" href="https://www.health.harvard.edu/newsletter_article/sleep-and-mental-health#:~:text=The%20brain%20basis%20of%20a%20mutual%20relationship%20between,
+                    the%20stage%20for%20negative%20thinking%20and%20emotional%20vulnerability.">Sleep and mental
+                    health</a>
+            </li>
+            <li id="furtherLinksListItem3">
+                <a id="furtherLink3"
+                   href="https://www.mind.org.uk/information-support/types-of-mental-health-problems/sleep-problems/tips-to-improve-your-sleep/">How
+                    to cope with sleep problems</a>
+            </li>
+        </ul>
+    </div>
+    <h5 id="internalLink">At tidybutt we are all about getting involved and practicing what we preach.<br>
+        <a href="http://localhost:8080/meetups">Click Here</a> to see when our next group activity is!<br>
+        <br> Or if you  want to view our other resources, click the links below!
+       </h5>
+    <!--        broken links (as no routes) -->
+    <h5><a class="btn btn-primary btn-block" href="http://localhost:8080/nature">Nature</a>
+        <a class="btn btn-primary btn-block" href="http://localhost:8080/nutrition">Nutrition</a>
+        <a class="btn btn-primary btn-block" href="http://localhost:8080/fitness">Fitness</a></h5>
+</div>
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+
+
+</body>
+
+
+<style>
+    img {
+        width: 50%;
+    }
+</style>
+<!--Using ajax and js to render content added by Admin to sleep resource-->
+<script>
+    // call getTable method
+    this.getTable()
+
+    // ajax request to get data
+    function getTable() {
+        $.ajax({
+            url: "/news/search",
+            type: "GET",
+            success(res) {
+                let data = res.object
+                for (let i = 0; i < data.length; i++) {
+                    //using JavaScript to generate DOM nodes(h2)
+                    let h2 = document.createElement("h2")
+                    // assign a value to h2
+                    h2.innerHTML = data[i].title;
+                    //Takes the generated h2 as a child node append into the div that id is class
+                    document.getElementById("class").appendChild(h2);
+                    let h3 = document.createElement("h3")
+                    h3.innerHTML = data[i].authorName;
+                    document.getElementById("class").appendChild(h3);
+                    let h4 = document.createElement("h3")
+                    h4.innerHTML = data[i].text;
+                    document.getElementById("class").appendChild(h4);
+                    // If the image does not exist, no DOM node is generated (img)
+                    if(data[i].image) {
+                        let img = document.createElement("img")
+                        img.src = data[i].image;
+                        document.getElementById("class").appendChild(img);
+                    }
+                }
+            }
+        })
+    }
+
+</script>
+</html>

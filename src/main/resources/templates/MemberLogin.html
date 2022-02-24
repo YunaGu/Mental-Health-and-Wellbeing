@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/static/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Login</title>
+</head>
+
+<a href="/" th:href="@{/}">
+<button class="home-btn fa fa-home"> Home</button>
+</a>
+
+<body class="login-body">
+<!--form for login- uses thymeleaf to correctly route to login page using post method-->
+    <form class="login-form" th:action="@{/login}" method="post" autocomplete="off">
+    <h2>Sign In</h2>
+        <div th:if="${param.error}" class="login-error">Incorrect username/password. <br> Please try again.</div>
+    <div class="login-box">
+        <input type="text" id="username" name="username" placeholder="Username">
+    </div>
+    <div class="login-box">
+        <input type="password" id="password" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="login-btn">Sign In</button>
+    </form>
+</body>
+
+</html>

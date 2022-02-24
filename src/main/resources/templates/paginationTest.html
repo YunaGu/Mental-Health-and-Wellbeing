@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commonHeader(title)">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="../static/css/pagination.css" th:href="@{/css/pagination.css}"type="text/css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div th:fragment="pagination">
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="box card shadow-sm"></div>
+                </div>
+            </div>
+            <div class="wrapper"></div>
+        </div>
+    </div>
+
+</div>
+
+<script th:inline="javascript" src="/js/pagination.js" th:src="@{/js/pagination.js}" type="text/javascript" rel="script"></script>
+<script th:inline="javascript" src="/js/pagination1.js" th:src="@{/js/pagination1.js}" type="text/javascript" rel="script"></script>
+
+</body>
+</html>

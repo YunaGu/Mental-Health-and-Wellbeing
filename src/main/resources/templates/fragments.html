@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:fragment="Head">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--    fontawesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+            integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+            crossorigin="anonymous"></script>
+    <!-- style.css stylesheet-->
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <!--    todo Add fragment to <title> so that we can modify title when needed-->
+    <title>Tidy Butt</title>
+</head>
+<body>
+
+<!--Navbar-->
+<nav th:fragment="Nav" class="navbar navbar-expand-md navbar- fixed-top brand-name" style="background-color: #522d80">
+
+    <!--    <a href="#" class="navbar-brand img-thumbnail text-warning fa-2x"></a>-->
+    <!--    <button type="button" class="navbar-toggler bg-light" data-toggle="collapse" data-target="#navbar"><span-->
+    <!--            class="navbar-toggler-icon"></span></button>-->
+    <a class ="navbar-logo" href="http://localhost:8080/index"><img class="" src="https://static.wixstatic.com/media/f0b99f_5685b75a314143bebbefd37f4ba3ad36~mv2.png/v1/fill/w_230,h_182,al_c,q_85,usm_0.66_1.00_0.01/TB_LOGO.webp"> </a>
+    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbar">
+        <ul class="navbar-nav">
+
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="http://localhost:8080/index">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                        class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+                        data-toggle="dropdown" href="#">Resources</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://localhost:8080/nutrition">Nutrition</a>
+                    <a class="dropdown-item" href="http://localhost:8080/sleep">Sleep</a>
+                    <a class="dropdown-item" href="http://localhost:8080/learning">Learning</a>
+                    <a class="dropdown-item" href="http://localhost:8080/nature">Nature</a>
+                    <a class="dropdown-item" href="http://localhost:8080/fitness">Fitness</a>
+                    <a class="dropdown-item" href="http://localhost:8080/video">Video</a>
+                    <a class="dropdown-item" href="http://localhost:8080/socialMedia">Social Media</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                        class="nav-link text-light text-uppercase font-weight-bold px-3 dropdown-toggle"
+                        data-toggle="dropdown" href="#">Support</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="http://localhost:8080/quizList">Quiz</a>
+                    <a class="dropdown-item" href="http://localhost:8080/session">Our Stories</a>
+                    <a class="dropdown-item" href="http://localhost:8080/SendStory">Send your Story</a>
+                    <a class="dropdown-item" href="http://localhost:8080/bookSession">Book an Online Session</a>
+                    <a class="dropdown-item" href="http://localhost:8080/SupportAdmin">Admin tasks</a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/newspage">News</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/postContactFormHTMLReturn">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="http://localhost:8080/reviews">Reviews</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/membersArea">Members Area</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                   href="http://localhost:8080/Register">Register</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3"
+                                    href="http://localhost:8080/login">Login</a></li>
+            <li class="nav-item"><a class="nav-link text-light text-uppercase font-weight-bold px-3" href="http://localhost:8080/admin/login">Admin Login</a></li>
+        </ul>
+    </div>
+</nav>
+<!--End of nav-->
+
+<!--Header-->
+<header th:fragment="Header" class="header">
+    <img class="gradient-banner"
+         src="https://static.wixstatic.com/media/f0b99f_fcbd0f25f2294fe7a69fbe2dd3e74e47~mv2.png/v1/fill/w_1903,h_194,al_c,q_90,usm_0.66_1.00_0.01/f0b99f_fcbd0f25f2294fe7a69fbe2dd3e74e47~mv2.webp">
+    <h1 th:include=":: #contentPageTitle" class="header-text" >this title will not be shown if you reference the ID</h1>
+</header>
+<!--End of Header-->
+
+<!-- LAYOUT-->
+<div th:fragment="main-layout" class="layout-main-div">
+    <h4 th:include=":: #quote" class=".layout-quote"> "this quote will not be shown aslong as the ID is referenced</h4>
+    <h2 th:include=":: #title1" class="layout-title">A Title</h2>
+    <div class="layout-row">
+        <div class="layout-col">
+            <p th:include=":: #pageContent1"> Some content... </p>
+            <p th:include=":: #pageContent2"> Some more content...</p>
+        </div>
+        <div class="layout-col">
+            <!--            Note: remove placeholder image here eventually & refer to it on page using proper image-->
+            <div th:include=":: #pageImage1">
+            </div>
+        </div>
+    </div>
+    <h2 th:include=":: #title2" class="layout-title">A second title</h2>
+    <div class="layout-row">
+        <p th:include=":: #pageContent3"> more content</p>
+        <br>
+        <br>
+        <p th:include=":: #pageContent4"> even more content</p>
+    </div>
+    <div th:include=":: #pageImage2">
+
+    </div>
+    <!--    <img th:include=":: #pageImage2" src="https://via.placeholder.com/250" id="pic2">-->
+    <h2 th:include=":: #title3" class="layout-title">A third title</h2>
+    <div class="layout-row">
+        <p th:include=":: #pageContent5"> content </p>
+        <p th:include=":: #pageContent6"> content</p>
+    </div>
+    <div class="layout-row">
+        <p th:include=":: #pageContent7"> even more content</p>
+        <p th:include=":: #pageContent8"> even more content </p>
+    </div>
+    <div th:include=":: #furtherReading" class="further-reading">
+        <h3 th:include=":: #furtherReadingTitle1">title</h3>
+        <h5 th:include=":: #furtherReadingTitle2">another title?</h5>
+        <div th:include=":: #furtherLinks" class="further-links">
+            <p th:include=":: #furtherLinksContent" > Content about the links below goes here</p>
+            <ul>
+                <li th:include=":: #furtherLinksListItem1" class="further-links-list">
+                    <a th:include=":: #furtherLink1" href="#"></a></li>
+                <li th:include=":: #furtherLinksListItem2" class="further-links-list">
+                    <a th:include=":: #furtherLink2" href="#"> </a></li>
+                <li th:include=":: #furtherLinksListItem3" class="further-links-list">
+                    <a th:include=":: #furtherLink3" href="#"> </a></li>
+            </ul>
+        </div>
+        <h5 th:include=":: #internalLink"></h5>
+    </div>
+</div>
+
+<!--END OF LAYOUT-->
+
+
+<!-- Footer -->
+<footer th:fragment="Footer" class="footer-bg" >
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-white font-weight-light text-capitalize p-3">I hope you're tidy butt if you're not
+                    that's ok too
+                </h1>
+                <div class="py-2">
+                    <a href="https://www.facebook.com/tidybuttmat"> <ul class="fab fa-facebook fa-2x text-primary mx-3"></ul></a>
+                    <a href="https://www.instagram.com/tidy_butt/?hl=en"> <ul class="fab fa-instagram fa-2x text-danger mx-3"></ul></a>
+                </div>
+                <p class="text-light py-4 m-0">&copy;Copyright 2021 - Tidy Butt</p>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+</footer>
+<!-- End of footer -->
+
+</body>
+</html>

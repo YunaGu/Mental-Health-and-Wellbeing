@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" xlmns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<link th:href="@{css/review.css}" rel="stylesheet"/>
+<link th:href="@{images/fav-icon.png}" rel="shortcut icon"/>
+<!--    fontawesome-->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+
+<!--review heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Reviews</h1>
+</header>
+
+<section id="reviews">
+
+<!--    heading-->
+
+    <div class="review-heading">
+        <span>Reviews</span>
+        <h1>From our clients</h1>
+    </div>
+
+<!--    reviews-->
+
+    <div class="review-box-container">
+
+<!--        box 1-->
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+<!--                    reviewer image-->
+                    <div class="profile-img">
+                        <img src="/static/images/matc.jpg" alt="Reviewer picture" th:src="@{images/matc.jpg}"/>
+                    </div>
+<!--                    reviewer name-->
+                    <div class="reviewer-name">
+                        <strong>Reviewer 1</strong>
+                        <span>@reviewer1</span>
+                    </div>
+                </div>
+
+<!--                review stars-->
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>   <!-- fas= full star -->
+                    <i class="far fa-star"></i>   <!-- far= empty star -->
+                </div>
+            </div>
+
+<!--            Reviewer comments-->
+            <div class ="review-comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum totam unde ut vel velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum
+                    totam unde ut vel velit.</p>
+            </div>
+
+        </div>
+
+        <!--        box 2-->
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <!--                    reviewer image-->
+                    <div class="profile-img">
+                        <img src="/static/images/matc.jpg" alt="Reviewer picture" th:src="@{images/matc.jpg}"/>
+                    </div>
+                    <!--                    reviewer name-->
+                    <div class="reviewer-name">
+                        <strong>Reviewer 2</strong>
+                        <span>@reviewer2</span>
+                    </div>
+                </div>
+
+                <!--                review stars-->
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <!--            Reviewer comments-->
+            <div class ="review-comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum totam unde ut vel velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum
+                    totam unde ut vel velit.</p>
+            </div>
+
+
+        </div>
+
+        <!--        box 3-->
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <!--                    reviewer image-->
+                    <div class="profile-img">
+                        <img src="/static/images/matc.jpg" alt="Reviewer picture" th:src="@{images/matc.jpg}"/>
+                    </div>
+                    <!--                    reviewer name-->
+                    <div class="reviewer-name">
+                        <strong>Reviewer 3</strong>
+                        <span>@reviewer3</span>
+                    </div>
+                </div>
+
+                <!--                review stars-->
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <!--            Reviewer comments-->
+            <div class ="review-comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum totam unde ut vel velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum
+                    totam unde ut vel velit.</p>
+            </div>
+
+
+        </div>
+
+        <!--        box 4-->
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <!--                    reviewer image-->
+                    <div class="profile-img">
+                        <img src="/static/images/matc.jpg" alt="Reviewer picture" th:src="@{images/matc.jpg}"/>
+                    </div>
+                    <!--                    reviewer name-->
+                    <div class="reviewer-name">
+                        <strong>Reviewer 4</strong>
+                        <span>@reviewer4</span>
+                    </div>
+                </div>
+
+                <!--                review stars-->
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <!--            Reviewer comments-->
+            <div class ="review-comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum totam unde ut vel velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum
+                    totam unde ut vel velit.</p>
+            </div>
+
+
+        </div>
+
+
+        <!--        box 5-->
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <!--                    reviewer image-->
+                    <div class="profile-img">
+                        <img src="/static/images/matc.jpg" alt="Reviewer picture" th:src="@{images/matc.jpg}"/>
+                    </div>
+                    <!--                    reviewer name-->
+                    <div class="reviewer-name">
+                        <strong>Reviewer 5</strong>
+                        <span>@reviewer5</span>
+                    </div>
+                </div>
+
+                <!--                review stars-->
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <!--            Reviewer comments-->
+            <div class ="review-comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum totam unde ut vel velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum
+                    totam unde ut vel velit.</p>
+            </div>
+
+
+        </div>
+
+
+        <!--       box 6-->
+        <div class="review-box">
+            <div class="box-top">
+                <div class="profile">
+                    <!--                    reviewer image-->
+                    <div class="profile-img">
+                        <img src="/static/images/matc.jpg" alt="Reviewer picture" th:src="@{images/matc.jpg}"/>
+                    </div>
+                    <!--                    reviewer name-->
+                    <div class="reviewer-name">
+                        <strong>Reviewer 6</strong>
+                        <span>@reviewer6</span>
+                    </div>
+                </div>
+
+                <!--                review stars-->
+                <div class="reviews">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <!--            Reviewer comments-->
+            <div class ="review-comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum totam unde ut vel velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cum dolore dolorem eveniet
+                    exercitationem fuga itaque laudantium magnam molestiae nulla officiis quae ratione, reprehenderit rerum
+                    totam unde ut vel velit.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer th:replace="fragments::footer"></footer>
+
+</body>
+</html>

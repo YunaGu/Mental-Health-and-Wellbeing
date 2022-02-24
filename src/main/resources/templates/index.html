@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xlmns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<!--css stylesheet-->
+<link th:href="@{css/index.css}" rel="stylesheet"/>
+<link th:href="@{css/userquery.css}" rel="stylesheet"/>
+
+<!--homepage heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Tidy Butt Mental Health Charity</h1>
+</header>
+
+<section class="bg-light p-5">
+    <div class="container-fluid">
+        <!-- title -->
+        <div class="row">
+            <div class="col text-center mb-3">
+                <p class="lead text-secondary">Here at Tidy Butt we are on a mission to bring about meaningful change and
+                    break the stigma around mental health, and with your support we strongly believe that this is possible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+
+<!--    Section giving some background information on the charity.-->
+
+    <div class="who col text-center mb-3">
+        <h2>Who are we?</h2>
+        <img src="/static/images/tbteam.jpg" class="teamphoto-img" th:src="@{images/tbteam.jpg}"/>
+        <h5 class="lead text-secondary"> "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</h5>
+    </div>
+</section>
+
+<!--Section showing photos and information for charity team members.-->
+
+<section>
+    <div class="meet col text-center mb-3">
+        <img src="/static/images/matc.jpg" class="teamphoto-img" th:src="@{images/matc.jpg}"/>
+        <h5 class="lead text-secondary"> "Matthew Creel is the founder of the Tidy Butt Charity."</h5>
+        <img src="/static/images/madd.jpg" class="teamphoto-img" th:src="@{images/madd.jpg}"/>
+        <h5 class="lead text-secondary"> "Maddison Davies is a commonwealth bronze medallist and an ambassador of the Tidy Butt Charity."</h5>
+        <img src="/static/images/ao.jpg" class="teamphoto-img" th:src="@{images/ao.jpg}"/>
+        <h5 class="lead text-secondary"> "Ross Mahoney is a volunteer at the Tidy Butt charity."</h5>
+        <img src="/static/images/ab.jpg" class="teamphoto-img" th:src="@{images/ab.jpg}"/>
+        <h5 class="lead text-secondary"> ""Rhys Thomas is a former professional rugby player who’s played at the highest level for club and country but have also had his own fair share of battles with his mental health and addiction.
+            He has committed himself to now helping others that are struggling with they’re mental health / addiction and we cannot wait to work with him moving forward.and an ambassador of the Tidy Butt Charity."</h5>
+    </div>
+</section>
+
+<!--Footer fragment used to generate a coloured banner for the motivational quotes section.-->
+
+<footer th:fragment="Footer" class="footer-bg" >
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="text-black text-capitalize p-3">Motivational Quotes
+                </h2>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--This section takes the quotes from the daily_quotes mySQL table and displays them into a table on the homepage.-->
+
+<section class ="motivquotes">
+    <div class="meet col text-center mb-5">
+        <div class="table-responsive ">
+            <table class="content-table">
+
+            <thead>
+            <tr>
+                <th style="width: 22%; text-align: center">Quote</th>
+            </tr>
+            </thead>
+
+            <tr th:each="quote: ${quotes}">
+                <td th:text="${quote.quotes}"></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</section>
+
+<footer th:replace="fragments::footer"></footer>
+
+</body>
+</html>

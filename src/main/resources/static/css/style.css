@@ -1,0 +1,415 @@
+.header {
+    position: relative;
+    text-align: center;
+}
+
+.bg-primary {
+    background-color: #800080;
+}
+
+.header-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+/*styling for layout */
+.layout-main-div {
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.layout-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.layout-col p {
+    padding: 15px 0 25px;
+}
+
+#pic1 {
+    width: 100%;
+}
+
+.layout-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*purple/blue banner image*/
+.gradient-banner {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+}
+
+.footer-bg {
+    background-image: url(https://static.wixstatic.com/media/f0b99f_fcbd0f25f2294fe7a69fbe2dd3e74e47~mv2.png/v1/fill/w_1903,h_194,al_c,q_90,usm_0.66_1.00_0.01/f0b99f_fcbd0f25f2294fe7a69fbe2dd3e74e47~mv2.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.layout-title {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/*(image 2) styling for central position*/
+#pic2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout-quote {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-style: italic;
+}
+
+.further-reading {
+    margin-top: 5px;
+    border-top: 1px solid black;
+}
+
+.further-reading h5 {
+    margin-bottom: 20px;
+}
+
+/*spacing between links*/
+.further-links-list {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+/*spacing between words used for clickable internal links*/
+.clickableInternalLinks {
+    padding: 0 0 0 100px;
+    word-wrap: normal;
+    display: inline-block;
+    color: rebeccapurple;
+    text-decoration: underline;
+}
+
+/*News styling*/
+
+.news-main {
+    margin-top: 100px;
+}
+
+/*sets colour of font for all anchor tags within news page*/
+.news-main a {
+    color: #212529;
+}
+
+.news-main h5 a {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.newsImage {
+    overflow: hidden;
+}
+
+.newsImage img {
+    object-fit: cover;
+}
+
+.news-image-small {
+    max-height: 180px;
+}
+
+.news-image-small img {
+    max-height: 180px;
+}
+
+.newsThumb {
+    width: 100%;
+}
+
+.news-section-title {
+    position: relative;
+    margin-bottom: 20px;
+    color: rebeccapurple;
+}
+
+.news-section-title span {
+    font-weight: 350;
+    font-size: 16px;
+    color: mediumpurple;
+}
+
+/*styling for after span (line underneath news section title)*/
+/*todo make this look nicer?*/
+.news-section-title span:after {
+    content: '';
+    position: absolute;
+    background-color: mediumpurple;
+    width: 60px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+}
+
+/*Adds a divider by using border-bottom to news articles */
+.news-divider {
+    padding: 10px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.news-summary {
+    color: lightslategray;
+}
+
+.news-date {
+    color: #BEBEBE;
+}
+
+/*divider for between sections*/
+.section-divider {
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+/*divider/spacing for upcoming events section*/
+.upcoming-events .row {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+/*overrides size of containers in news page (makes the width 1500px on large screen*/
+@media (min-width: 1200px) {
+    .news-container {
+        max-width: 1500px;
+    !important;
+    }
+}
+
+/*bottom padding for the signup title*/
+.signup-title {
+    padding-bottom: 20px;
+}
+
+/*aligns whole form to the center*/
+.meetup-signup-form {
+    padding: 12px;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+/*styling for sign up button on news page*/
+.meetup-signup-btn {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    height: 35px;
+}
+
+.meetup-signup-btn:hover {
+    background-color: rebeccapurple;
+}
+
+.meetup-signup-btn:active {
+    transform: translateY(2px);
+}
+
+/*styling for navbar logo img*/
+.navbar-logo img {
+    height: 50px;
+    float: left;
+    margin-right: 7px;
+}
+
+.resource-pic-1 {
+    height: 300px;
+    width: 420px;
+}
+
+.resource-pic-2 {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*styling to fix the stretched look for some images in order to make them look good*/
+.fix-stretch {
+    width: auto;
+}
+
+/*styling for errors using form validation (sigup form)*/
+
+input:focus:invalid {
+    border: red solid 3px;
+}
+
+.newsletter-checkbox + .checkbox-label {
+    color: red;
+}
+
+.newsletter-checkbox:checked + .checkbox-label {
+    color: black;
+}
+
+/*Styling for login page*/
+/*NOTE: Used some of Yichen's styling working as a team in order to save time & stay consistent */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(219, 42, 255);
+    background: linear-gradient(176deg, rgb(143, 4, 229) 0%, rgba(13, 249, 203, 1) 100%);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, .2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .4);
+}
+
+.login-form h2 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+.login-form.login-box {
+    position: relative;
+    width: 100%;
+}
+
+.login-box input {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+.login-box input::placeholder {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.login-btn {
+    /*background-color: rgba(147, 112, 219, 0.3);    -Leaving this here as I might revert back to this colour later.*/
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    position: relative;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.login-btn:hover {
+    background: rgba(13, 249, 203, 0.3);
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/*extra materials page styling*/
+.extra-materials-title {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.extra-materials-maintitle {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.extra-materials-subtitle {
+    padding-top: inherit;
+    padding-bottom: 120px;
+}
+
+.view-members {
+    width: 80%;
+    margin: 20px auto auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.admin-delete-btn {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    height: 30px;
+}
+/*styling for position of home button*/
+.home-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+    color: white;
+    font-size: 24px !important;
+    border: none;
+}
+.logout-btn {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    height: 30px;
+}
+
+a.overview-btn {
+    background-color: #6f42c1;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    height: 26px;
+    width: 80px;
+    text-decoration: none;
+}
+
+.login-error {
+    color: red;
+    text-align: center;
+}
+
+.error-403-title {
+    color: darkred;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+/*styling to centre an element*/
+.centre{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

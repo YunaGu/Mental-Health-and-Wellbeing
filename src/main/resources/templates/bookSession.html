@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+
+<!--customized css file-->
+<link th:href="@{css/style_mehdi.css}" rel="stylesheet"/>
+
+<!--Fitness heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Book a Session</h1>
+</header>
+
+<main class="container">
+    <h2 class="my_class">List of Our Practitioners</h2>
+
+    <!--Form to look up a practitioner from the support staff-->
+    <form name='LookUpForm' action='/LookUpPractitioner/' method='get' align="left">
+        <label>Search a practitioner by Surname: <input type="text" name="lastName" size="20"></label><br>
+    </form>
+
+    <!--    a button to show all practitioners list from database-->
+    <form name='ShowAll' action='/ShowAllPractitioners' method='get'>
+        <button type="submit" class="btn btn-primary btn-sm">Show All</button>
+    </form>
+
+<!--    Links to Add and Delete a practitioner to/from the support staff -->
+<!--    <a href="/DeletePractitioner" style="float:right">Delete practitioner</a>-->
+<!--    <a href="/AddPractitioner" style="float:right">Add practitioner </a>-->
+    <!--table to show list of practitioners -->
+    <div class="table-responsive ">
+        <table class="table text-left">
+            <thead>
+            <tr>
+                <th style="width: 22%;">ID</th>
+                <th style="width: 22%;">Name</th>
+                <th style="width: 22%;">Surname</th>
+                <th style="width: 22%;">Email</th>
+            </tr>
+            </thead>
+            <tr th:each="practitioner: ${practitioners}">
+                <td th:text="${practitioner.id}"></td>
+                <td th:text="${practitioner.firstName}"></td>
+                <td th:text="${practitioner.lastName}"></td>
+                <td th:text="${practitioner.email}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <article class="my_class">
+
+        <h2>How to get Help </h2>
+        <p>We have lots of information to help you understand and manage your situation when you need help.</p>
+        <ul>
+            <li>If you feel like you might attempt <del>suicide</del>, or may have seriously harmed yourself, you should get urgent
+                medical help.
+            </li>
+            <li>If you are in crisis right now and looking for ways to help yourself stay safe.</li>
+            <li>If you would like to speak to one of our team directly.</li>
+            <li>If you need any <strong>mental health</strong> guidance.</li>
+            <li>If you are struggling with your mental health, psychological wellbeing hidden wounds.</li>
+        </ul>
+        <h3>Get in Touch</h3>
+        <p>If you need help in any of this areas please get in touch with our profissional
+            staff with <strong>email</strong> and they will contact you soon.
+        </p>
+        <h3>Book Online Session</h3>
+        <p>Complete the form below to book an online session with us.
+            our online session will be on <strong>Microsoft Teams</strong>.</p>
+        <p>We are available from 9am to 5pm Monday to Friday.</p>
+
+        <!--        form for booking a session-->
+        <form name='sendEmailForm' action='/RequireHelp' onsubmit="return bookSessionFormValidation()" method='get' align="left">
+            <label class="required">Your Email Address: <input type="email" name="email" placeholder="name@example.com"></label><br>
+            <label class="required">Date: <input type="date" name="date" placeholder="dd/mm/yyyy" ></label><br>
+            <label class="required">Time: <input type="time" name="time"></label><br>
+            <button type="submit" class="btn btn-primary"> Submit</button>
+        </form>
+        <!--        End of form-->
+
+    </article>
+</main>
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+<script src="/js/iJava.js"></script>
+</body>
+</html>

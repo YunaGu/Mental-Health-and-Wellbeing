@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>>
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+
+<!--  End of navbar  -->
+
+<!--Contact heading banner-->
+<header th:replace="fragments::header">
+  <h1 id="contentPageTitle">Contact</h1>
+</header>
+
+<!-- Contact -->
+<section class="p-5 bg-light">
+  <div class="container-fluid">
+    <!-- title -->
+    <div class="row">
+    </div>
+    <!-- end of title -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="text-center text-secondary">
+        </div>
+
+        <div class="col text-center mb-3">
+          <p class="lead text-secondary">Thank you for filling out our contact form.</p>
+          <p class="lead text-secondary">We have a 24 hour reply commitment.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End of contact -->
+
+<script type="text/javascript" th:src="@{js/contact.js}"></script>
+
+<footer th:replace="fragments::footer"></footer>
+
+</body>
+</html>

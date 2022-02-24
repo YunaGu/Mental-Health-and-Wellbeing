@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="SupprotFragments::Nav"></nav>
+
+<!--customized css file-->
+<link th:href="@{css/style_mehdi.css}" rel="stylesheet"/>
+
+<!--Fitness heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Book a Session</h1>
+</header>
+<!--button to add logout functionality for security that is handled in WebSecurityConfig.java controller-->
+<div class="float-right">
+    <form action="#" th:action="@{/logout}" method="post">
+        <input type="submit" class="btn btn-primary btn-sm" value="Logout" />
+    </form>
+</div>
+
+<main class="container">
+    <h2 class="my_class">List of Our Practitioners</h2>
+
+<!--    &lt;!&ndash;Form to look up a practitioner from the support staff&ndash;&gt;-->
+<!--    <form name='LookUpForm' action='/LookUpPractitioner/' method='get' align="left">-->
+<!--        <label>Search a practitioner by Surname: <input type="text" name="lastName" size="20"></label><br>-->
+<!--    </form>-->
+
+    <!--    a button to show all practitioners list from database-->
+    <form name='ShowAll' action='/ShowAllPractitioners/Admin' method='get'>
+        <button type="submit" class="btn btn-primary btn-sm">Show All</button>
+    </form>
+
+    <!--Links to Add and Delete a practitioner to/from the support staff -->
+    <a href="/DeletePractitioner" style="float:right">Delete practitioner</a>
+    <a href="/AddPractitioner" style="float:right">Add practitioner </a>
+    <!--table to show list of practitioners -->
+    <div class="table-responsive ">
+        <table class="table text-left">
+            <thead>
+            <tr>
+                <th style="width: 22%;">ID</th>
+                <th style="width: 22%;">Name</th>
+                <th style="width: 22%;">Surname</th>
+                <th style="width: 22%;">Email</th>
+            </tr>
+            </thead>
+            <tr th:each="practitioner: ${practitioners}">
+                <td th:text="${practitioner.id}"></td>
+                <td th:text="${practitioner.firstName}"></td>
+                <td th:text="${practitioner.lastName}"></td>
+                <td th:text="${practitioner.email}"></td>
+            </tr>
+        </table>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer th:replace="fragments::footer"></footer>
+<!-- End of footer -->
+<script src="/js/iJava.js"></script>
+</body>
+</html>

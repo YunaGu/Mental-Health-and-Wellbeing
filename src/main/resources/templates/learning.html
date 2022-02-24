@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+<!--Learning heading banner-->
+<header th:replace="fragments::header">
+    <h1 id="contentPageTitle">Learning</h1>
+</header>
+
+<link th:href="@{css/learning.css}" rel="stylesheet"/>
+
+<!--Learning section-->
+
+    <section class="bg-light p-5">
+        <div class="container-fluid">
+            <!-- title -->
+            <div class="row">
+                <div class="col text-center mb-3">
+                    <h1 class="display-4">Learn a new skill</h1>
+                    <p class="lead text-secondary">When was the last time you gained new knowledge or learned a new skill?</p>
+                </div>
+
+                    </div>
+                <div class="learnbenefits">
+                    <h2>What are the benefits of learning?</h2>
+                    <h5 class="lead text-secondary"> "Research shows that learning can improve our mental wellbeing in
+                        a variety of ways, these include boosting our confidence, building a sense of purpose, and creating a
+                        sense of achievement upon completion. Learning a new skill can also enhance employability prospects. Extensive
+                        research into the benefits of learning have been conducted over the years. The articles below give some
+                        compelling reasons why we should invest in ourselves
+                        and gain new knowledge / skills."</h5>
+                    <ul>
+                        <li><a href="https://firsthand.co/blogs/job-search/benefits-of-learning-new-skills">A blog on the benefits of learning</a></li>
+                        <li><a href="https://www.verywellmind.com/what-is-learning-2795332">A blog on how we learn</a></li>
+                        <li><a href="https://www.coursera.org/learn/learning-how-to-learn">A course teaching us how to learn</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="learnresources">
+                <h2>Resources for new skills</h2>
+                <h5 class="lead text-secondary"> Below are some suggestions for your learning with links to resources."</h5><br>
+                <ul>
+                    <li>Musical Instrument</li>
+                    <img src="/static/images/music.jpg" class="music-img" th:src="@{images/music.jpg}"/>
+                    <br><a href="https://playthetunes.com/easiest-instrument-to-learn/">Learn a musical instrument.</a><hr>
+                    <li>Public Speaking</li>
+                    <img src="/static/images/pubspeak.jpg" class="publicspeak-img" th:src="@{images/pubspeak.jpg}"/>
+                    <br><a href="https://www.coursera.org/courses?languages=en&query=public%20speaking&page=1&utm_source=bg&utm_medium=sem&utm_campaign=93-BrandedSearch-ROW&utm_content=93-BrandedSearch-ROW&campaignid=415061741&adgroupid=1209463256217810&device=c&keyword=https%3A%2F%2Fwww.coursera.org%2Fcourses%3Flanguages%3Den&matchtype=b&network=o&devicemodel=&adpostion=&creativeid=&hide_mobile_promo&msclkid=340f6fc0df8d1a5ebcb50e5e5b72f456&utm_term=https%3A%2F%2Fwww.coursera.org%2Fcourses%3Flanguages%3Den">Link for learning public speaking.</a><hr>
+                    <li>Project Management</li>
+                    <img src="/static/images/projectmanage.jpg" class="pmanage-img" th:src="@{images/projectmanage.jpg}"/>
+                    <br><a href="https://www.simplilearn.com/learn-project-management-fundamentals-skillup">Learn project management.</a><hr>
+                    <li>Foreign Languages</li>
+                    <img src="/static/images/language.jpg" class="language-img" th:src="@{images/language.jpg}"/>
+                    <br><a href="https://www.italki.com/">Website for learning languages.</a>
+                    <br><a href="https://www.verbling.com/">Another website for learning languages.</a><hr>
+                    <li>Photography</li>
+                    <img src="/static/images/photo.jpg" class="photo-img" th:src="@{images/photo.jpg}"/>
+                    <br><a href="https://expertphotography.com/a-beginners-guide-to-photography/">Learn photography.</a><hr>
+
+                </ul>
+            </div>
+
+    </section>
+        <footer th:replace="fragments::footer"></footer>
+
+</body>
+</html>

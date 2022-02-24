@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<!--<head>-->
+    <!-- Required meta tags -->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    <title>Quiz Test</title>-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="../static/CSS/quizList.css" th:href="@{/CSS/quizList.css}" rel="stylesheet" type="text/css">
+    <!--    <link src="../static/JS/quizList.js" th:src="@{/JS/quizList.js}" rel="script" type="text/javascript">-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<!--</head>-->
+<!-- Head-->
+<head th:replace="fragments::head"></head>
+<!--End of Head-->
+<body>
+<!--  Navbar  -->
+<nav th:replace="fragments::nav"></nav>
+<!--  End of navbar  -->
+
+    <div class="main">
+        <!--        carousel        -->
+        <div class="carousel">
+            <span class="card">
+                <div class="content" >
+                    <span class="questions" > your score is</span>
+                    <span id="scores" class="options"></span>
+                </div>
+                <div id="emoji"></div>
+                <div id="recommend">
+                    <p class="more">We suggest you look through these resource</p>
+
+                </div>
+            </span>
+        </div>
+        <!--        end of carousel        -->
+
+    </div>
+
+<footer th:replace="fragments::footer"></footer>
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>-->
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script src="/JS/score.js" th:src="@{/JS/score.js}" rel="script" type="text/javascript"></script>
+<!--<script src="/JS/submit.js" th:src="@{/JS/submit.js}" rel="script" type="text/javascript"></script>-->
+<script src="/JS/emoji.js" rel="script" type="text/javascript"></script>
+
+</body>
+
+</html>

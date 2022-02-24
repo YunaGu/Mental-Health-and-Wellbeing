@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org/">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/static/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+
+<a href="/" th:href="@{/}">
+    <button class="home-btn fa fa-home"> Home</button>
+</a>
+
+<body class="login-body">
+
+<!--    NOTE: user id, role & enabled will be set and user WONT be allowed to edit these values - this is for testing purposes.-->
+<form class="login-form" id="RegisterForm" th:action="@{/Member}" method="post" autocomplete="off">
+    <h2>Register</h2>
+    <span style="font-weight: bold" id='username-message'></span>
+    <div class="login-box">
+        <input type="text" name="username" id="username" placeholder="Choose a username..">
+    </div>
+    <div class="login-box">
+        <span style="font-weight: bold" id='password-regex-message'></span><br>
+        <input type="password" name="password" id="password" placeholder="Choose a password..">
+    </div>
+    <span style="font-weight: bold" id='confirm-message'></span>
+    <div class="login-box">
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password..">
+    </div>
+    <button type="submit" id="signup-btn" class="login-btn">Sign up</button>
+
+</form>
+
+</body>
+
+<script src="/static/js/registerValidation.js" th:src="@{/js/registerValidation.js}"></script>
+</html>
